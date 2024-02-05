@@ -1,4 +1,31 @@
 <html>
-<head></head>
-<body><h1>Test</h1></body>
+<head>
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/asciidoctor.js/1.5.5-5/asciidoctor.min.js" integrity="sha512-J7IXHi6LD/94IioL/slk1hNk85wBBH7x8zpyaAiqBd801N/zcSDXWQknUtgriVuwNeG3rjqWdvcHoYhMaRE4Ew==" crossorigin="anonymous"></script>
+  
+
+</head>
+
+<body>
+
+    <h1>Test</h1>
+    <div id="content"></div>
+
+    
+    
+    <script>
+        var asciidoctor = Asciidoctor()
+        fetch('https://raw.githubusercontent.com/asciidoctor/asciidoctor-browser-extension/main/README.adoc')
+          .then(res => res.text()) // Gets the response and returns it as a blob
+          .then(text => {
+            console.log(text)
+            const html = asciidoctor.convert(text) 
+            console.log(html) 
+            const parent = document.getElementById('content');
+            parent.innerHTML = html;       
+          });
+        
+    </script>
+</body>
 </html>
