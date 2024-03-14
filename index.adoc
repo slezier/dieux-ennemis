@@ -1,4 +1,5 @@
 # Objectif de ce document
+:stylesheet: index.css
 
 Dieux ennemis offre la possibilité de jouer des scénarios à double objectifs.
 D'un coté les héros par leur aventures tentent de s'attirer les faveurs des dieux au risque de provoquer leurs couroux.
